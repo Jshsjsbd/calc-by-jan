@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator By JAN</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculator By JAN</h1>
+        <div class="calculator">
+            <div class="display">
+                <div id="equation" class="equation" aria-live="polite"></div>
+                <div id="result" class="result" aria-live="polite"></div>
+            </div>
+            <div class="buttons">
+                <button class="clear" onclick="handleClick('C')" aria-label="Clear">C</button>
+                <button class="backspace" onclick="handleClick('backspace')" aria-label="Backspace">← Backspace</button>
+                <button onclick="handleClick('7')">7</button>
+                <button onclick="handleClick('8')">8</button>
+                <button onclick="handleClick('9')">9</button>
+                <button onclick="handleClick('/')" aria-label="Divide">/</button>
+                <button onclick="handleClick('4')">4</button>
+                <button onclick="handleClick('5')">5</button>
+                <button onclick="handleClick('6')">6</button>
+                <button onclick="handleClick('x')" aria-label="Multiply">x</button>
+                <button onclick="handleClick('1')">1</button>
+                <button onclick="handleClick('2')">2</button>
+                <button onclick="handleClick('3')">3</button>
+                <button onclick="handleClick('-')" aria-label="Subtract">-</button>
+                <button onclick="handleClick('0')">0</button>
+                <button onclick="handleClick('.')">.</button>
+                <button onclick="handleClick('=')" aria-label="Equals">=</button>
+                <button onclick="handleClick('+')" aria-label="Add">+</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
