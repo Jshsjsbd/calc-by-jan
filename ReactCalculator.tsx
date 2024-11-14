@@ -8,13 +8,16 @@ export default function ReactCalculator() {
 
   const handleClick = (value: string) => {
     if (value === '=') {
-      try {
-        // Replace 'x' with '*' for multiplication
-        const calculatedResult = eval(equation.replace(/x/g, '*'))
-        setResult(calculatedResult.toString())
-      } catch (error) {
-        setResult('Error')
-      }
+      if (result === 'Infinity') {
+        setResult('Math Error')
+      } else {
+        try {
+          // Replace 'x' with '*' for multiplication
+          const calculatedResult = eval(equation.replace(/x/g, '*'))
+          setResult(calculatedResult.toString())
+        } catch (error) {
+          setResult('Error')
+        }
     } else if (value === 'C') {
       setEquation('')
       setResult('')
