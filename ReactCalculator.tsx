@@ -15,6 +15,8 @@ export default function ReactCalculator() {
           // Replace 'x' with '*' for multiplication
           const calculatedResult = eval(equation.replace(/x/g, '*'))
           setResult(calculatedResult.toString())
+          setEquation(calculatedResult.toString())
+          setResult('')
         } catch (error) {
           setResult('Error')
         }
