@@ -8,12 +8,15 @@ function updateDisplay() {
 
 function handleClick(value) {
     if (value === '=') {
-        try {
-            // Replace 'x' with '*' for multiplication
-            result = eval(equation.replace(/x/g, '*')).toString();
-        } catch (error) {
-            result = 'Error';
-        }
+        if (result === 'Infinity') {
+            result = 'Math Error';
+        } else {
+            try {
+                // Replace 'x' with '*' for multiplication
+                result = eval(equation.replace(/x/g, '*')).toString();
+            } catch (error) {
+                result = 'Error';
+            }
     } else if (value === 'C') {
         equation = '';
         result = '';
