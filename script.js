@@ -11,8 +11,13 @@ function handleClick(value) {
             try {
                 // Replace 'x' with '*' for multiplication
                 result = eval(equation.replace(/x/g, '*')).toString();
+                if (result === 'Infinity') {
+                    result = 'Math Error';
+                } else {
+                    result = eval(equation.replace(/x/g, '*')).toString();
+                }
             } catch (error) {
-                result = 'Math Error';
+                result = 'Error';
             }
     } else if (value === 'C') {
         equation = '';
